@@ -1,0 +1,38 @@
+body{
+   /* background:url(./img/beautiful-beauty-bright-2064662.jpg) */
+}
+#header{
+    height: 100px;
+    background-color: aqua;
+}
+.login{
+    background-color: beige;
+}
+#content{
+    height: 1000px;
+    background-color: antiquewhite;
+}
+#search{
+    background-color: #bbbbbb;
+}
+.fourImg{
+    display: inline;
+}
+#footer{
+    height: 100px;
+    background-color: black;
+}
+#dataTable{
+    /* margin: ; */
+    /* height: 250px; */
+    
+}
+#contentTable{
+    height:  400px;
+    background-color: #e9e3e3;
+}
+.dashboard{
+    width: 100px;
+    height: 160px;
+    background-color: #bbbbbb;
+}
