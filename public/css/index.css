@@ -36,3 +36,9 @@ body{
     height: 160px;
     background-color: #bbbbbb;
 }
+#sendPage{
+    position: fixed;
+    right:10px ;
+    top: 10px;
+    font-size: 20px;
+}

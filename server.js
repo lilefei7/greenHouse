@@ -2,7 +2,7 @@ var http = require('http');
 var express = require('express');
 var sio = require('socket.io');
 var app = express();
-app.use(express.static(__dirname + '/'));
+app.use(express.static(__dirname + ''));
 var server = http.createServer(app);
 server.listen(80);
 var io = sio.listen(server);
