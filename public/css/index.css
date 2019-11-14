@@ -3,24 +3,24 @@ body{
 }
 #header{
     height: 100px;
-    background-color: aqua;
+    /* background-color: aqua; */
 }
 .login{
-    background-color: beige;
+    /* background-color: beige; */
 }
 #content{
     height: 1000px;
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
 }
 #search{
-    background-color: #bbbbbb;
+    /* background-color: #bbbbbb; */
 }
 .fourImg{
     display: inline;
 }
 #footer{
     height: 100px;
-    background-color: black;
+    /* background-color: black; */
 }
 #dataTable{
     /* margin: ; */
@@ -29,16 +29,27 @@ body{
 }
 #contentTable{
     height:  400px;
-    background-color: #e9e3e3;
+    /* background-color: #e9e3e3; */
 }
 .dashboard{
     width: 100px;
     height: 160px;
-    background-color: #bbbbbb;
+    /* background-color: #bbbbbb; */
 }
 #sendPage{
     position: fixed;
     right:10px ;
     top: 10px;
     font-size: 20px;
+}
+.chartLineContain{
+    display: flex;
+    /* flex: 0.5;     */
+}
+#chartContain canvas{
+    width: 500px;
+    /* height: 100px; */
+}
+a:hover{
+    text-decoration: none;
 }

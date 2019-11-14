@@ -3,10 +3,14 @@
 
 <head>
     <title class="">显示数据</title>
-    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" >
-    <link rel="stylesheet" href="./public/css/index.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- <script src="./node_modules/socket.io/lib/index.js"></script> -->
     <script src="/socket.io/socket.io.js"></script>
+    <script src="./public/js/Chart.min.js"></script>
+    <link rel="stylesheet" href="./public/css/index.css">
+
 </head>
+
 <body>
     <div class="container">
         <div class="row">
@@ -14,22 +18,32 @@
                 <div id="header">
                     <div>主题(logo) </div>
                 </div>
-                <div id = "content">
+                <div id="content">
+                    <div id="chartContain">
+                        <div class="chartLineContain">
+                            <canvas id="chartTemperature"></canvas>
+                            <canvas id="chartHumidity"></canvas>
+                        </div>
+                        <div class="chartLineContain">
+                            <canvas id="chartIllumination"></canvas>
+                            <canvas id="chartCarbonDioxide"></canvas>
+                        </div>
+                    </div>
                     <div id="contentTable">
-                    <table class="table table-hover table-sm table-bordered" id = "dataTable">
-                        <thead>
-                          <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">温度(℃)</th>
-                            <th scope="col">湿度(%RH)</th>
-                            <th scope="col">光照(klux)</th>
-                            <th scope="col">二氧化碳(ppm)</th>
-                            <th scope="col">...</th>
-                            <th scope="col">...</th>
-                          </tr>
-                        </thead>
-                        <tbody id="dataTableTbody">
-                          <!-- <tr>
+                        <table class="table table-hover table-sm table-bordered" id="dataTable">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">温度(℃)</th>
+                                    <th scope="col">湿度(%RH)</th>
+                                    <th scope="col">光照(klux)</th>
+                                    <th scope="col">二氧化碳(ppm)</th>
+                                    <th scope="col">...</th>
+                                    <th scope="col">...</th>
+                                </tr>
+                            </thead>
+                            <tbody id="dataTableTbody">
+                                <!-- <tr>
                             <th scope="row">1</th>
                             <td>Mark</td>
                             <td>Otto</td>
@@ -37,34 +51,43 @@
                             <td>...</td>
                             <td>...</td>
                           </tr> -->
-                          
-                        </tbody>
-                    </table>
-                    </div>
-                    <div class="row justify-content-center">
-                        <div class="dashboard m-3"></div>
-                        <div class="dashboard m-3"></div>
-                        <div class="dashboard m-3"></div>
-                        <div class="dashboard m-3"></div>
-                        <div class="dashboard m-3"></div>
-                        <div class="dashboard m-3"></div>
+
+                            </tbody>
+                        </table>
                     </div>
 
+                    <!-- <canvas id="myChart" width="400" height="400"></canvas> -->
+
+
+                    <!-- 几个方块排成一列 -->
+                    <!-- <div class="row justify-content-center">
+                        <div class="dashboard m-3"></div>
+                        <div class="dashboard m-3"></div>
+                        <div class="dashboard m-3"></div>
+                        <div class="dashboard m-3"></div>
+                        <div class="dashboard m-3"></div>
+                        <div class="dashboard m-3"></div>
+                    </div> -->
+
                 </div>
-                <div id = "footer">
-                    <p>footer</p>
+                <div id="footer">
+                    <!-- <p>footer</p> -->
                 </div>
             </div>
         </div>
     </div>
-    <a id = "sendPage"  href="./indexSendData.html" class="button btn-success rounded"> 转到发送数据的页面</a>
+    <a id="sendPage" href="./indexSendData.html" class="button btn-success rounded" target="_blank   "> 转到发送数据的页面</a>
+
 </body>
 
 <!-- <script src="bootstrap-4.3.1-dist/base/jquery-3.4.1.js"></script> -->
-<script src = "./public/js/indexDisplay.js"></script>
+<script src="./public/js/indexDisplay.js"></script>
+<script src="./public/js/chart.js"></script>
 <script src="./node_modules/jquery/dist/jquery.min.js"></script>
 <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js""></script>
-<!-- <script src="./js/refresh.js"></script> -->
-<script src="./public/js/tool.js"></script>
+<!-- <script src=" ./js/refresh.js"> </script> -->
+    < script src = "./public/js/tool.js" >
+</script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script> -->
 
 </html>

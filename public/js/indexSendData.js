@@ -27,7 +27,7 @@ function sendData_onclick() {
     });
     // alert("发送数据");
 }
-sendData_onclick();
+// sendData_onclick();
 document.onkeydown = function (event) {
     let e = event || window.event || arguments.callee.caller.arguments[0];
     if (e && e.keyCode == 13) { // 按Enter 
@@ -36,15 +36,11 @@ document.onkeydown = function (event) {
 };
 //生成随机数据
 function randomNum(minNum, maxNum) {
-    switch (arguments.length) {
-        case 1:
-            return parseInt(Math.random() * minNum + 1, 10);
-            break;
-        case 2:
-            return parseInt(Math.random() * (maxNum - minNum + 1) + minNum, 10);
-            break;
-        default:
-            return 0;
-            break;
-    }
-} 
+
+    return parseInt(Math.random() * (maxNum - minNum + 1) + minNum, 10)
+}
+
+function autoSendData() {
+    setInterval(sendData_onclick,1000);
+    
+}
